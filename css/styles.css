@@ -1,0 +1,836 @@
+/*
+ * Portfolio Styles
+ * Combined custom CSS for Muhammad Yasir Mannan Portfolio
+ */
+
+/* ============================================
+   CSS Variables (Theme Colors)
+   ============================================ */
+:root {
+    --text-color: #343a40;
+    --text-secondary-color: #6c757d;
+    --text-link-color: #007bff;
+    --background-color: #eaedf0;
+    --secondary-background-color: #64ffda1a;
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+
+    /* Dark theme variables */
+    --text-color-dark: #e4e6eb;
+    --text-secondary-color-dark: #b0b3b8;
+    --text-link-color-dark: #ffffff;
+    --background-color-dark: #18191a;
+    --secondary-background-color-dark: #212529;
+    --primary-color-dark: #ffffff;
+    --secondary-color-dark: #212529;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+body {
+    font-family: "Lora", serif !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+html {
+    background-color: var(--background-color) !important;
+}
+
+body::-webkit-scrollbar {
+    height: 0px;
+    width: 8px;
+    background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #b0b0b0;
+    outline: 1px solid var(--background-color);
+}
+
+/* ============================================
+   Font Classes
+   ============================================ */
+.secondary-font, #secondary-font {
+    font-family: "Lora", serif;
+}
+
+.primary-font, #primary-font {
+    font-family: "Alata", sans-serif;
+}
+
+.default-font, #default-font {
+    font-family: "Roboto", sans-serif;
+}
+
+/* ============================================
+   Theme Toggle (Light/Dark Mode)
+   ============================================ */
+.light > * {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.dark {
+    --background-color: var(--background-color-dark) !important;
+    --secondary-background-color: var(--secondary-background-color-dark) !important;
+    --text-color: var(--text-color-dark) !important;
+    --text-secondary-color: var(--text-secondary-color-dark) !important;
+    --text-link-color: var(--text-link-color-dark) !important;
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+}
+
+/* Dark mode card text fix */
+.dark .card,
+.dark .card * {
+    color: var(--text-color-dark) !important;
+}
+
+.dark .card .text-secondary,
+.dark .card small {
+    color: var(--text-secondary-color-dark) !important;
+}
+
+.dark .card h5,
+.dark .card h6,
+.dark .card p,
+.dark .card .card-title,
+.dark .card .card-text {
+    color: var(--text-color-dark) !important;
+}
+
+.dark .card a {
+    color: var(--text-link-color-dark) !important;
+}
+
+.dark .badge {
+    background-color: var(--secondary-background-color-dark) !important;
+    color: var(--text-color-dark) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary-color) !important;
+}
+
+#theme-toggle:focus {
+    outline: 0;
+}
+
+#theme-toggle svg {
+    height: 18px;
+}
+
+button#theme-toggle {
+    border: none;
+    font-size: 20px;
+    margin: auto 4px;
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-bottom {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-left {
+    0% { transform: translateX(-10px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-right {
+    0% { transform: translateX(20px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-up {
+    0% { transform: translateY(-10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+header .navbar.animate {
+    animation: fade-up 0.5s ease-in;
+}
+
+/* ============================================
+   Header / Navigation
+   ============================================ */
+header {
+    z-index: 10;
+    position: relative;
+    top: 0;
+}
+
+.showHeaderOnTop {
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    top: 0;
+    position: sticky;
+}
+
+header .navbar .navbar-nav a {
+    color: var(--text-color) !important;
+}
+
+#theme-toggle {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.navbar-toggler svg {
+    fill: currentColor;
+    color: var(--text-color);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 .05em;
+}
+
+.navbar-text {
+    font-size: 16px !important;
+    opacity: 0.95;
+    white-space: nowrap;
+}
+
+header .nav-link {
+    transition: none !important;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    opacity: 0.95;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+#hero {
+    min-height: 100vh;
+    line-height: 2rem;
+    max-width: 100%;
+}
+
+#hero .content.animate {
+    animation: fade-left 1s ease-out;
+}
+
+#hero .subtitle {
+    font-size: clamp(14px, 5vw, 16px);
+    opacity: 0.6;
+}
+
+#hero h1 {
+    font-size: clamp(40px, 8vw, 80px);
+    color: var(--primary-color) !important;
+}
+
+#hero h2 {
+    font-size: clamp(40px, 8vw, 60px);
+    opacity: 0.5;
+}
+
+#hero p {
+    margin: 20px 0px 0px;
+    max-width: 640px;
+    opacity: 0.8;
+}
+
+#hero .image img {
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    padding: 0;
+    border: 3px solid var(--secondary-color);
+    border-radius: 1rem;
+}
+
+#hero .image.animate img {
+    animation: fade-in 1s ease-out;
+    transition: box-shadow 0.3s;
+}
+
+#hero .image.animate img:hover {
+    box-shadow: 0 0 11px rgb(15 80 100 / 20%);
+    filter: contrast(1.2);
+}
+
+#hero a.btn.social-icon {
+    color: var(--primary-color) !important;
+    line-height: 0%;
+    border-radius: 50%;
+    margin-top: 50px;
+    padding: 0.7rem;
+    border: 1px solid var(--primary-color);
+    transition: none;
+}
+
+#hero a.btn.social-icon img {
+    width: 1em;
+}
+
+#hero a.btn.social-icon:hover {
+    opacity: 0.8;
+}
+
+#hero a.btn {
+    margin-top: 50px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color) !important;
+    border-radius: .75rem;
+    transition: none;
+}
+
+#hero a.btn:focus {
+    box-shadow: none;
+}
+
+#hero a.btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
+#hero a.btn.social-icon:hover {
+    background-color: var(--background-color) !important;
+    opacity: 0.7;
+}
+
+#hero .hero-content > a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#hero .hero-content > a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#hero .hero-content > a:hover::after,
+#hero .hero-content > a:focus::after,
+#hero .hero-content > a:active::after {
+    width: 100%;
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+#about h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#about .image img {
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    transition: box-shadow 0.3s;
+    padding: 0;
+    border: 0;
+}
+
+#about .image img:hover {
+    box-shadow: 0 0 11px rgb(15 80 100 / 20%);
+}
+
+#about ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+
+#about ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#about ul li::before {
+    content: "\25B9";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0px;
+}
+
+#about .content {
+    font-weight: 500;
+    opacity: 0.9 !important;
+    line-height: 1.7rem !important;
+}
+
+#about a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#about a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#about a:hover::after,
+#about a:focus::after,
+#about a:active::after {
+    width: 100%;
+}
+
+/* ============================================
+   Experience Section
+   ============================================ */
+#experience h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#experience * {
+    background-color: transparent !important;
+}
+
+#experience .tab-pane > * {
+    opacity: 0.9;
+}
+
+#experience .tab-pane small {
+    opacity: 0.8;
+}
+
+#experience .tab-pane ul {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#experience .experience-container .tab-content > .tab-pane p {
+    padding: 1% 0;
+    margin: 0;
+}
+
+#experience .experience-container {
+    background-color: var(--secondary-color) !important;
+    border-radius: .75rem;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+}
+
+#experience .nav-item .nav-link {
+    color: var(--text-color) !important;
+    border-bottom: 2px solid transparent;
+    border-radius: 0%;
+    transition: none;
+    cursor: pointer;
+}
+
+#experience .nav-item .nav-link.active {
+    color: var(--text-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+    opacity: 0.8;
+}
+
+#experience .nav-item .nav-link.active:hover {
+    transition: none !important;
+}
+
+#experience .nav-item .nav-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+    opacity: 0.8;
+}
+
+#experience a {
+    opacity: 0.9;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#experience a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#experience a:hover::after,
+#experience a:focus::after,
+#experience a:active::after {
+    width: 100%;
+}
+
+#experience .experience-container .tab-content .tab-pane ul {
+    overflow: hidden;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+#experience .experience-container .tab-content .tab-pane ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#experience .experience-container .tab-content .tab-pane ul li::before {
+    content: "\25B9";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0px;
+}
+
+#experience .experience-container .tab-content .tab-pane .featuredLink img {
+    width: 1.1em;
+}
+
+#experience .experience-container .tab-content .tab-pane .featuredLink a::after {
+    display: block;
+    width: auto;
+    height: auto;
+    bottom: 0em;
+    background-color: transparent;
+    transition: none;
+    opacity: 1;
+}
+
+#experience .experience-container .tab-content .tab-pane .featuredLink a.btn {
+    border: 1px solid var(--primary-color);
+    border-radius: .75rem;
+    transition: none;
+}
+
+#experience .experience-container .tab-content .tab-pane .featuredLink a.btn:focus {
+    box-shadow: none;
+}
+
+#experience .experience-container .tab-content .tab-pane .featuredLink a.btn:hover {
+    color: var(--text-color) !important;
+    opacity: 0.7;
+}
+
+/* ============================================
+   Education Section
+   ============================================ */
+#education .container > h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+/* Index badge removed - no longer used */
+
+/* Remove forced background on all card children to allow dark mode to work */
+
+#education .card {
+    background-color: var(--secondary-color) !important;
+    border-radius: 1.5rem;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    border: 2px solid var(--text-secondary-color) !important;
+    transition: box-shadow .2s linear, opacity .2s linear;
+    transition: transform 0.2s;
+}
+
+#education .card .card-body {
+    background-color: var(--secondary-color) !important;
+}
+
+#education .card .card-body {
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: transparent !important;
+}
+
+@media all and (max-width: 768px) {
+    #education .card .card-body {
+        padding: 2rem 1rem;
+    }
+}
+
+#education .card:hover {
+    transition: 0.3s;
+    box-shadow: 0 4px 11px rgb(15 80 100 / 16%);
+    border: 2px solid var(--primary-color) !important;
+}
+
+#education .card .card-body .education-content a {
+    color: var(--text-link-color) !important;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+#education .card .card-body > a h6 {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#education .card .card-body > a h6::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0.5;
+}
+
+#education .card .card-body > a h6:hover::after,
+#education .card .card-body > a h6:focus::after,
+#education .card .card-body > a h6:active::after {
+    width: 100%;
+}
+
+#education .card .card-body a.btn {
+    opacity: 0.9;
+    border: 1px solid var(--primary-color) !important;
+    color: var(--text-color) !important;
+    border-radius: .75rem;
+    box-shadow: none;
+    transition: none;
+}
+
+#education .card .card-body a.btn:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   Projects Section
+   ============================================ */
+#projects h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#projects a {
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#projects .badge {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    margin: 0 1%;
+}
+
+#projects .card {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: none !important;
+}
+
+#projects .card .card-body,
+#projects .card .card-footer {
+    background-color: var(--secondary-color) !important;
+}
+
+#projects .card .card-title {
+    color: var(--text-color) !important;
+}
+
+#projects .card .card-text {
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
+#projects .card:hover {
+    box-shadow: 0 0 11px rgb(15 80 100 / 20%);
+    transition: transform 0.3s;
+    transform: translateY(-7px);
+}
+
+#projects .card .card-head {
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: none !important;
+}
+
+#projects .card .card-footer {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#projects .card:hover .card-img-top {
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+}
+
+#projects .card-img-top {
+    transition: transform 0.3s;
+}
+
+#projects .float-end .btn {
+    transition: none;
+    border-radius: .5rem !important;
+    border-color: var(--primary-color) !important;
+}
+
+#projects .float-end .btn:focus {
+    box-shadow: none !important;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+#contact h3 {
+    color: var(--text-secondary-color) !important;
+}
+
+#contact .btn {
+    transition: none;
+    transition: opacity 0.3s;
+    border-radius: .5rem !important;
+    border-color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+}
+
+#contact .btn:hover {
+    opacity: .7;
+}
+
+#contact .btn:focus {
+    box-shadow: none !important;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer a h5 {
+    color: var(--text-color) !important;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+footer .card {
+    background-color: var(--secondary-color) !important;
+    border-radius: .75rem;
+    overflow: hidden;
+    border: none;
+}
+
+footer .card:hover {
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.tooltip {
+    line-height: 1rem;
+    border-radius: .5rem !important;
+}
+
+.tooltip-inner {
+    line-height: 1rem;
+}
+
+.tooltip .tooltip-arrow {
+    visibility: hidden !important;
+}
+
+/* ============================================
+   Image Lightbox Modal
+   ============================================ */
+#imageLightbox .modal-dialog {
+    max-width: 90vw;
+}
+
+#imageLightbox .modal-content {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+#imageLightbox .modal-header {
+    background-color: transparent !important;
+}
+
+#imageLightbox .modal-title {
+    color: #fff !important;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+#imageLightbox .modal-body {
+    background-color: transparent !important;
+    padding: 1rem;
+}
+
+#imageLightbox #lightboxImage {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+#imageLightbox .btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+#imageLightbox .btn-close-white:hover {
+    opacity: 1;
+}
+
+/* Project card image hover effect */
+#projects .card-head img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#projects .card-head img:hover {
+    opacity: 0.85;
+}

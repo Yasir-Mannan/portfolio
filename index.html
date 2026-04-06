@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Front End Web Developer - Computer Scientist">
+
+    <title>Muhammad Yasir Mannan - Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:url" content="https://yourusername.github.io/">
+    <meta property="og:site_name" content="Muhammad Yasir Mannan - Portfolio">
+    <meta property="og:title" content="Muhammad Yasir Mannan - Portfolio">
+    <meta property="og:description" content="Front End Web Developer - Computer Scientist">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Muhammad Yasir Mannan - Portfolio">
+    <meta name="twitter:description" content="Front End Web Developer - Computer Scientist">
+</head>
+
+<body class="light">
+    <!-- Header / Navigation -->
+    <header id="profileHeader">
+        <nav class="pt-3 navbar navbar-expand-lg animate">
+            <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+                <a class="navbar-brand primary-font text-wrap" href="#">
+                    Yasir Mannan
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24">
+                        <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                    </svg>
+                </button>
+
+                <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#about" aria-label="about">About Me</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#experience" aria-label="experience">Experience</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#education" aria-label="education">Education</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#projects" aria-label="projects">Projects</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#contact" aria-label="contact">Contact</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <div class="text-center">
+                                <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="py-5 align-middle">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
+                        <span class="subtitle">Hi, my name is</span>
+                        <h1>Muhammad Yasir Mannan.</h1>
+                        <h2>Senior UI/UX Engineer</h2>
+                        <p class="hero-content">
+                            Senior UI/UX Engineer with 6+ years of experience crafting intuitive, visually refined, and
+                            high-performance web interfaces. Led UI/UX direction at both TEKLOGIX and TechnoCares, owning the full design-to-development pipeline — from wireframes and design systems through to pixel-perfect implementation. Deep expertise in component architecture, interaction design, animation, and responsive layouts across enterprise SaaS, marketplaces, and insurance platforms. Proficient in Angular (v2–20) with strong hands-on experience across the full frontend stack. Early adopter of AI-augmented engineering — using Claude Code, Figma Make, Stitch, and Loveable to accelerate delivery, and building multi-agent orchestration pipelines that achieve 100% output at a fraction of traditional team cost.
+                        </p>
+                        <div class="row">
+                            <div class="col-auto h-100">
+                                <a href="yasir-cv.pdf" class="btn" download="Muhammad-Yasir-Mannan-CV.pdf">
+                                    <i class="fas fa-download me-2"></i>Download Resume
+                                </a>
+                            </div>
+                            <div class="col-auto px-0 h-100">
+                                <span class="px-1">
+                                    <a href="https://www.linkedin.com/in/m-yasir-m-618253139" target="_blank" class="btn social-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </span>
+                                <span class="px-1">
+                                    <a href="mailto:yasirmanan009@gmail.com" target="_blank" class="btn social-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                                <img src="images/me.png" class="img-thumbnail mx-auto rounded-circle" alt="Muhammad Yasir Mannan profile image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
+                <h3 class="mb-4">About Me</h3>
+                <div class="row">
+                    <div class="col-md-4 order-2 order-md-1 mb-4 mb-md-0">
+                        <div class="image text-center">
+                            <img src="images/me.png" class="img-thumbnail mx-auto rounded-circle" alt="Muhammad Yasir Mannan profile image">
+
+                        </div>
+                    </div>
+                    <div class="col-md-8 order-1 order-md-2">
+                        <div class="content">
+                            <p>
+                                I am a Front End Web Developer based in Lahore, Pakistan with a Bachelor's degree in Computer Science from COMSATS University Islamabad, Lahore Campus. I specialize in building modern, responsive web applications using Angular, TypeScript, and modern CSS frameworks.
+                            </p>
+                            <p>
+                                With over 6 years of professional experience, I have worked on enterprise-level SaaS platforms, insurance broker website, automotive marketplaces, salon booking systems, and more. Currently working at TEKLOGIX, developing and maintaining the ALPHA KLAUS enterprise platform. I am passionate about creating clean, user-friendly interfaces and writing maintainable, scalable code.
+                            </p>
+                            <p>
+                                Pioneered AI-integrated workflows across the full product lifecycle — from UI generation (Figma Make, Stitch, Loveable) to AI-assisted coding (Claude Code, GLM) and automated delivery pipelines. Authored custom skill definition files encoding frontend domain knowledge for AI agents, enabling repeatable high-quality output. Built multi-agent orchestration systems where specialised agents handle component generation, QA, styling, and accessibility in parallel — achieving 100% delivery output at the velocity of a full team.
+                            </p>
+                            <h6 class="mt-4 mb-3">Technologies I work with:</h6>
+                            <ul>
+                                <li>Angular</li>
+                                <li>TypeScript</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Bootstrap</li>
+                                <li>Tailwind CSS</li>
+                                <li>PrimeNG</li>
+                                <li>PrimeFlex</li>
+                                <li>SASS/SCSS</li>
+                                <li>GSAP</li>
+                                <li>jQuery</li>
+                                <li>Agentic AI</li>
+                                <li>Multi-Agent Systems with Claude</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-5">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
+                <h3 class="mb-4">Experience</h3>
+                <div class="experience-container p-4">
+                    <ul class="nav nav-tabs" id="experienceTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="teklogix-tab" data-bs-toggle="tab" data-bs-target="#teklogix" type="button" role="tab" aria-controls="teklogix" aria-selected="true">TEKLOGIX</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="technocares-tab" data-bs-toggle="tab" data-bs-target="#technocares" type="button" role="tab" aria-controls="technocares" aria-selected="false">TechnoCares</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3" id="experienceTabContent">
+                        <div class="tab-pane fade show active" id="teklogix" role="tabpanel" aria-labelledby="teklogix-tab">
+                            <h5>Front End Web Developer</h5>
+                            <small class="text-secondary">2023 - Present</small>
+                            <p class="mt-3">
+                                Working as a Front End Web Developer at TEKLOGIX, Lahore. Developing and maintaining enterprise SaaS platform (ALPHA KLAUS) used for business operations.
+                            </p>
+                            <ul>
+                                <li>Developed and maintained large-scale Angular 20 application with PrimeNG component library</li>
+                                <li>Implemented responsive UI designs using PrimeFlex and Tailwind CSS</li>
+                                <li>Collaborated with cross-functional teams to deliver features in an agile environment</li>
+                                <li>Wrote clean, maintainable TypeScript code with comprehensive component architecture</li>
+                            </ul>
+                            <div class="featuredLink mt-3">
+                                <a href="https://angular.dev/" target="_blank" class="btn btn-sm" data-bs-toggle="tooltip" title="Angular">
+                                    <i class="fa-brands fa-angular"></i> Angular
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="technocares" role="tabpanel" aria-labelledby="technocares-tab">
+                            <h5>Front End Web Developer</h5>
+                            <small class="text-secondary">2020 - 2023</small>
+                            <p class="mt-3">
+                                Worked as a Front End Web Developer at <a href="https://technocares.com/home" target="_blank">TechnoCares</a>, Lahore. Built multiple web applications including automotive marketplaces, claims management systems, and company websites.
+                            </p>
+                            <ul>
+                                <li>Developed DOOZ automotive marketplace from scratch using Angular and Bootstrap</li>
+                                <li>Built JOCLAIMS claims management website with Angular and SASS</li>
+                                <li>Created AutoScore car inspection platform with responsive design</li>
+                                <li>Developed company website (technocares.com) using Angular and jQuery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-5">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
+                <h3 class="mb-4 text-center">Education</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="mb-1">Bachelor of Computer Science</h5>
+                                        <a href="https://lahore.comsats.edu.pk/" target="_blank">
+                                            <h6 class="mb-0">COMSATS University Islamabad, Lahore Campus</h6>
+                                        </a>
+                                    </div>
+                                    <small class="text-secondary">2016 - 2020</small>
+                                </div>
+                                <div class="education-content mt-3">
+                                    <p>
+                                        Graduated with a Bachelor's degree in Computer Science. Developed strong foundations in software engineering, data structures, algorithms, and web technologies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
+                <h3 class="mb-2">Projects</h3>
+                <p class="text-secondary mb-4">A selection of projects I've contributed to. I've worked on many more across various industries.</p>
+                <div class="row g-4">
+
+                    <!-- Project 1: ALPHA KLAUS -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/alpha-klaus.png" class="card-img-top" alt="ALPHA KLAUS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ALPHA KLAUS</h5>
+                                <p class="card-text">Enterprise SaaS platform for business operations management. Built with Angular 20, TypeScript, PrimeNG, PrimeFlex, Tailwind CSS, and SCSS. Features comprehensive business management tools with modern UI/UX including tenant management, workflow engine, and reporting.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular 20</span>
+                                    <span class="badge">TypeScript</span>
+                                    <span class="badge">PrimeNG</span>
+                                    <span class="badge">Tailwind CSS</span>
+                                    <span class="badge">SCSS</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://alpha-klaus.de" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Pfoten Versichert -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/pfoten-versichert.png" class="card-img-top" alt="Pfoten Versichert">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pfoten Versichert</h5>
+                                <p class="card-text">Pet insurance broker website for German pet owners. Built with modern JavaScript (ES6), Tailwind CSS, GSAP animations, Swiper.js carousels, Lottie animations, and Puppeteer for automated tasks. Features insurance comparison tools and pet health resources.</p>
+                                <div class="mb-3">
+                                    <span class="badge">JavaScript ES6</span>
+                                    <span class="badge">Tailwind CSS</span>
+                                    <span class="badge">GSAP</span>
+                                    <span class="badge">Swiper.js</span>
+                                    <span class="badge">Lottie</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="http://pfoten-versichert.de/" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: kinderleicht Versichert -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/kinderleicht-versichert.png" class="card-img-top" alt="kinderleicht Versichert">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">kinderleicht Versichert</h5>
+                                <p class="card-text">German children's insurance comparison and management website. Built with JavaScript (ES6), Tailwind CSS, Lottie Web animations, Puppeteer, HTML5, and CSS3 with fully responsive design. Helps parents find the best insurance for their children.</p>
+                                <div class="mb-3">
+                                    <span class="badge">JavaScript ES6</span>
+                                    <span class="badge">Tailwind CSS</span>
+                                    <span class="badge">Lottie</span>
+                                    <span class="badge">HTML5</span>
+                                    <span class="badge">CSS3</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://kinderleicht-versichert.de/" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: DOOZ -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/dooz.png" class="card-img-top" alt="DOOZ">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">DOOZ</h5>
+                                <p class="card-text">Automotive marketplace platform for buying and selling vehicles. Built with Angular, TypeScript, Bootstrap, and SCSS. Features advanced search, filtering, and vehicle listings.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular</span>
+                                    <span class="badge">TypeScript</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">SCSS</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://dooz.com" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: JOCLAIMS -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/joclaims.png" class="card-img-top" alt="JOCLAIMS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">JOCLAIMS</h5>
+                                <p class="card-text">Claims management website for processing and tracking insurance claims. Built with Angular, TypeScript, Bootstrap, HTML, CSS, SASS, and JavaScript.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular</span>
+                                    <span class="badge">TypeScript</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">SASS</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://joclaims.com" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: AutoScore -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/autoscore.png" class="card-img-top" alt="AutoScore">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">AutoScore</h5>
+                                <p class="card-text">Car inspection platform providing detailed vehicle assessment reports powered by BOSCH. Built with Angular, Bootstrap, HTML, CSS, SCSS, and JavaScript with responsive design. Features 3D vehicle inspection visualization and scoring system.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">SCSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://autoscore.com" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: E-Workshop -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/e-workshop.png" class="card-img-top" alt="E-Workshop">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">E-Workshop</h5>
+                                <p class="card-text">Jordan-based online platform for car repair services. A web application to maintain and automate the workflow of automobile workshop outlets across different geographical locations. Features role-based data flow from valet to cashier through 6 different roles.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular 8</span>
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">SASS</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+<!--                                <div class="float-end">-->
+<!--                                    <a href="#" class="btn btn-sm">-->
+<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
+<!--                                    </a>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: 360 Business Pages -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/360business.png" class="card-img-top" alt="360 Business Pages">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">360 Business Pages</h5>
+                                <p class="card-text">Canadian multi-directional marketplace for the trucking industry. Buy and sell trucks and parts, register your business, post and apply for trucking jobs — all in one platform.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular</span>
+                                    <span class="badge">TypeScript</span>
+                                    <span class="badge">PrimeNG</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">Figma</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+<!--                                <div class="float-end">-->
+<!--                                    <a href="#" class="btn btn-sm">-->
+<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
+<!--                                    </a>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9: TechnoCares -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/technocares.png" class="card-img-top" alt="TechnoCares">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">TechnoCares</h5>
+                                <p class="card-text">Company website for TechnoCares, showcasing services and portfolio. Built with Angular, Bootstrap, HTML, SCSS, jQuery, and JavaScript.</p>
+                                <div class="mb-3">
+                                    <span class="badge">Angular</span>
+                                    <span class="badge">Bootstrap</span>
+                                    <span class="badge">jQuery</span>
+                                    <span class="badge">SCSS</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://technocares.com/home" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10: Sacred Path -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/sacred-path.png" class="card-img-top" alt="Sacred Path">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Sacred Path</h5>
+                                <p class="card-text">Online therapy and psychology booking platform integrating metaphysics, psychology, and conscious healing. Features an interactive booking calendar for session scheduling, customizable time slots, and follow-up package management for ongoing client care.</p>
+                                <div class="mb-3">
+                                    <span class="badge">HTML5</span>
+                                    <span class="badge">CSS3</span>
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">Custom UI</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+<!--                                <div class="float-end">-->
+<!--                                    <a href="#" class="btn btn-sm">-->
+<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
+<!--                                    </a>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11: Hairology Salons -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-head">
+                                <img src="images/projects/hairology.png" class="card-img-top" alt="Hairology Salons">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Hairology Salons</h5>
+                                <p class="card-text">VIP home service salon website specializing in sew-in/extensions, natural hair and styling. Built with WordPress, Elementor Pro, and custom CSS. Features online booking, service catalog with pricing, gallery, and customer reviews.</p>
+                                <div class="mb-3">
+                                    <span class="badge">WordPress</span>
+                                    <span class="badge">Elementor Pro</span>
+                                    <span class="badge">CSS3</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <div class="float-end">
+                                    <a href="https://hairologysalons.com/" target="_blank" class="btn btn-sm">
+                                        <i class="fas fa-external-link-alt"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5 text-center">
+                <h3 class="mb-4">Get In Touch</h3>
+                <p class="mb-4" style="max-width: 600px; margin: 0 auto;">
+                    My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <a href="mailto:yasirmanan009@gmail.com" class="btn btn-lg">
+                    <i class="fas fa-envelope me-2"></i> Mail me
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="https://www.linkedin.com/in/m-yasir-m-618253139" target="_blank" class="me-3">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+            </div>
+            <p class="text-secondary mb-0">
+                &copy; 2024 Muhammad Yasir Mannan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div class="modal fade" id="imageLightbox" tabindex="-1" aria-labelledby="imageLightboxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title text-white" id="imageLightboxLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="" alt="" class="img-fluid rounded" id="lightboxImage" style="max-height: 85vh; cursor: zoom-out;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
