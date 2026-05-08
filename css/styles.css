@@ -38,6 +38,7 @@ body {
 
 html {
     background-color: var(--background-color) !important;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -74,10 +75,6 @@ body::-webkit-scrollbar {
 /* ============================================
    Theme Toggle (Light/Dark Mode)
    ============================================ */
-.light > * {
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
-}
 
 .dark {
     --background-color: var(--background-color-dark) !important;
@@ -1206,6 +1203,11 @@ header .nav-link {
 /* ============================================
    Footer
    ============================================ */
+footer {
+    background-color: var(--secondary-color) !important;
+    border-top: 1px solid rgba(15, 80, 100, 0.06);
+}
+
 footer a h5 {
     color: var(--text-color) !important;
 }
@@ -1252,6 +1254,11 @@ footer .card:hover {
    ============================================ */
 #imageLightbox .modal-dialog {
     max-width: 90vw;
+    z-index: 99999;
+}
+
+#imageLightbox {
+    z-index: 99998 !important;
 }
 
 #imageLightbox .modal-content {
@@ -1575,4 +1582,169 @@ footer .card:hover {
 .lightbox-counter {
     font-size: 0.85rem;
     font-family: "Alata", sans-serif;
+}
+
+/* ============================================
+   Background Effects — Particles, Shapes, Aurora
+   ============================================ */
+
+/* Layer order: aurora(0) → particles(1) → shapes(2) → content(3) → modal(9999) */
+
+/* Aurora behind everything */
+#ambientGradient {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(102, 126, 234, 0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(118, 75, 162, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, rgba(240, 147, 251, 0.04) 0%, transparent 50%);
+    animation: auroraShift 15s ease-in-out infinite;
+}
+
+.dark #ambientGradient {
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(118, 75, 162, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, rgba(240, 147, 251, 0.06) 0%, transparent 50%);
+}
+
+@keyframes auroraShift {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(2%, -1%) rotate(1deg); }
+    66% { transform: translate(-1%, 2%) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Particle Canvas behind content */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating Shapes behind content */
+#floatingShapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Content above all effects */
+#content, #profileHeader, footer {
+    position: relative;
+    z-index: 3;
+}
+
+/* Make body bg transparent so particles/aurora show through */
+body {
+    background-color: transparent !important;
+}
+
+/* Sections transparent so effects show between cards */
+#about,
+#ai-work,
+#experience,
+#education,
+#projects,
+#contact {
+    background-color: transparent !important;
+}
+
+/* Floating Shapes */
+.floating-shape {
+    position: absolute;
+    opacity: 0;
+    animation: shapeFloat linear infinite, shapeFadeIn 1.5s ease forwards;
+}
+
+@keyframes shapeFadeIn {
+    to { opacity: 1; }
+}
+
+.floating-shape--circle {
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.06));
+    border: 1px solid rgba(102, 126, 234, 0.15);
+}
+
+.dark .floating-shape--circle {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.12), rgba(118, 75, 162, 0.08));
+    border-color: rgba(102, 126, 234, 0.18);
+}
+
+.floating-shape--ring {
+    border-radius: 50%;
+    border: 2px solid rgba(102, 126, 234, 0.12);
+    background: transparent;
+}
+
+.dark .floating-shape--ring {
+    border-color: rgba(102, 126, 234, 0.18);
+}
+
+.floating-shape--diamond {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(240, 147, 251, 0.05));
+    border: 1px solid rgba(102, 126, 234, 0.12);
+    transform: rotate(45deg);
+}
+
+.dark .floating-shape--diamond {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.06));
+    border-color: rgba(102, 126, 234, 0.15);
+}
+
+.floating-shape--triangle {
+    background: transparent;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 43px solid rgba(102, 126, 234, 0.08);
+}
+
+.dark .floating-shape--triangle {
+    border-bottom-color: rgba(102, 126, 234, 0.12);
+}
+
+@keyframes shapeFloat {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    25% { transform: translateY(-30px) rotate(5deg) scale(1.05); }
+    50% { transform: translateY(-10px) rotate(-3deg) scale(0.95); }
+    75% { transform: translateY(-40px) rotate(7deg) scale(1.02); }
+    100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+.floating-shape--diamond {
+    animation: shapeFloatDiamond linear infinite, shapeFadeIn 1.5s ease forwards;
+}
+
+@keyframes shapeFloatDiamond {
+    0% { transform: rotate(45deg) translateY(0) scale(1); }
+    25% { transform: rotate(50deg) translateY(-25px) scale(1.05); }
+    50% { transform: rotate(42deg) translateY(-8px) scale(0.95); }
+    75% { transform: rotate(52deg) translateY(-35px) scale(1.02); }
+    100% { transform: rotate(45deg) translateY(0) scale(1); }
+}
+
+/* Lightbox stays on top */
+#imageLightbox {
+    z-index: 9999 !important;
+}
+
+#imageLightbox .modal-dialog {
+    z-index: 10000;
 }
