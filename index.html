@@ -64,6 +64,9 @@
                             <a class="nav-link" href="#about" aria-label="about">About Me</a>
                         </li>
                         <li class="nav-item navbar-text">
+                            <a class="nav-link" href="#ai-work" aria-label="ai-work">AI Work</a>
+                        </li>
+                        <li class="nav-item navbar-text">
                             <a class="nav-link" href="#experience" aria-label="experience">Experience</a>
                         </li>
                         <li class="nav-item navbar-text">
@@ -104,42 +107,77 @@
     <!-- Main Content -->
     <div id="content">
 
-        <!-- Hero Section -->
-        <section id="hero" class="py-5 align-middle">
+        <!-- Hero + About Section -->
+        <section id="about" class="py-5 align-middle">
             <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
-                        <span class="subtitle">Hi, my name is</span>
-                        <h1>Muhammad Yasir Mannan.</h1>
-                        <h2>Senior UI/UX Engineer</h2>
-                        <p class="hero-content">
-                            Senior UI/UX Engineer with 6+ years of experience crafting intuitive, visually refined, and
-                            high-performance web interfaces. Led UI/UX direction at both TEKLOGIX and TechnoCares, owning the full design-to-development pipeline — from wireframes and design systems through to pixel-perfect implementation. Deep expertise in component architecture, interaction design, animation, and responsive layouts across enterprise SaaS, marketplaces, and insurance platforms. Proficient in Angular (v2–20) with strong hands-on experience across the full frontend stack. Early adopter of AI-augmented engineering — using Claude Code, Figma Make, Stitch, and Loveable to accelerate delivery, and building multi-agent orchestration pipelines that achieve 100% output at a fraction of traditional team cost.
-                        </p>
-                        <div class="row">
-                            <div class="col-auto h-100">
-                                <a href="yasir-cv.pdf" class="btn" download="Muhammad-Yasir-Mannan-CV.pdf">
-                                    <i class="fas fa-download me-2"></i>Download Resume
-                                </a>
-                            </div>
-                            <div class="col-auto px-0 h-100">
-                                <span class="px-1">
-                                    <a href="https://www.linkedin.com/in/m-yasir-m-618253139" target="_blank" class="btn social-icon">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </span>
-                                <span class="px-1">
-                                    <a href="mailto:yasirmanan009@gmail.com" target="_blank" class="btn social-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </span>
+                <div class="about-wrapper">
+                    <div class="row align-items-center">
+                        <!-- Profile Image Column -->
+                        <div class="col-sm-12 col-md-12 col-lg-4 order-1 order-lg-1 mb-4 mb-lg-0">
+                            <div class="about-image-wrap">
+                                <div class="about-image-ring">
+                                    <img src="images/me.png" class="about-image" alt="Muhammad Yasir Mannan">
+                                </div>
+                                <div class="about-image-badge">
+                                    <span>6+ Years</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="row justify-content-center">
-                            <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
-                                <img src="images/me.png" class="img-thumbnail mx-auto rounded-circle" alt="Muhammad Yasir Mannan profile image">
+
+                        <!-- Content Column -->
+                        <div class="col-sm-12 col-md-12 col-lg-8 order-2 order-lg-2">
+                            <div class="about-content animate-content">
+                                <span class="about-greeting">Hi, my name is</span>
+                                <h1 class="about-name">Muhammad Yasir Mannan.</h1>
+                                <h2 class="about-role">Senior UI/UX Engineer</h2>
+
+                                <p class="about-intro">
+                                    Senior UI/UX Engineer with 6+ years of experience crafting intuitive, visually refined, and
+                                    high-performance web interfaces. Led UI/UX direction at both TEKLOGIX and TechnoCares, owning the full design-to-development pipeline — from wireframes and design systems through to pixel-perfect implementation. Deep expertise in component architecture, interaction design, animation, and responsive layouts across enterprise SaaS, marketplaces, and insurance platforms. Proficient in Angular (v2–20) with strong hands-on experience across the full frontend stack.
+                                </p>
+
+                                <p class="about-detail">
+                                    Based in Lahore, Pakistan with a Bachelor's in Computer Science from COMSATS University Islamabad. Currently at TEKLOGIX developing the ALPHA KLAUS enterprise platform. Early adopter of AI-augmented engineering — using Claude Code, Claude Design, Figma Make, Stitch, and Loveable to accelerate delivery, and building multi-agent orchestration pipelines that achieve 100% output at a fraction of traditional team cost.
+                                </p>
+
+                                <!-- Action Buttons -->
+                                <div class="about-actions">
+                                    <a href="yasir-cv.pdf" class="btn about-btn-primary" download="Muhammad-Yasir-Mannan-CV.pdf">
+                                        <i class="fas fa-download me-2"></i>Download Resume
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/m-yasir-m-618253139" target="_blank" class="btn about-btn-social" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="mailto:yasirmanan009@gmail.com" target="_blank" class="btn about-btn-social" aria-label="Email">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Tech Stack -->
+                                <div class="about-tech-section">
+                                    <h6 class="about-tech-title">Tech Stack</h6>
+                                    <div class="about-tech-tags">
+                                        <span class="about-tech-tag" data-delay="0">Angular</span>
+                                        <span class="about-tech-tag" data-delay="1">TypeScript</span>
+                                        <span class="about-tech-tag" data-delay="2">JavaScript</span>
+                                        <span class="about-tech-tag" data-delay="3">HTML5</span>
+                                        <span class="about-tech-tag" data-delay="4">CSS3</span>
+                                        <span class="about-tech-tag" data-delay="5">Bootstrap</span>
+                                        <span class="about-tech-tag" data-delay="6">Tailwind CSS</span>
+                                        <span class="about-tech-tag" data-delay="7">PrimeNG</span>
+                                        <span class="about-tech-tag" data-delay="8">PrimeFlex</span>
+                                        <span class="about-tech-tag" data-delay="9">SASS/SCSS</span>
+                                        <span class="about-tech-tag" data-delay="10">GSAP</span>
+                                        <span class="about-tech-tag" data-delay="11">jQuery</span>
+
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="12">Agentic AI</span>
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="13">Multi-Agent Systems</span>
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="14">Claude Code</span>
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="15">Claude Design</span>
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="16">Stitch</span>
+                                        <span class="about-tech-tag about-tech-tag--ai" data-delay="17">Loveable</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -147,45 +185,119 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-5">
+        <!-- AI Work Section -->
+        <section id="ai-work" class="py-5">
             <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
-                <h3 class="mb-4">About Me</h3>
-                <div class="row">
-                    <div class="col-md-4 order-2 order-md-1 mb-4 mb-md-0">
-                        <div class="image text-center">
-                            <img src="images/me.png" class="img-thumbnail mx-auto rounded-circle" alt="Muhammad Yasir Mannan profile image">
+                <h3 class="mb-2">AI-Augmented Engineering</h3>
+                <p class="text-secondary mb-4">Pioneering AI-integrated workflows across the full product lifecycle — from design to deployment.</p>
 
+                <!-- AI Stats Bar -->
+                <div class="ai-stats-bar mb-4">
+                    <div class="ai-stat">
+                        <div class="ai-stat-icon"><i class="fas fa-robot"></i></div>
+                        <div class="ai-stat-number">6+</div>
+                        <div class="ai-stat-label">AI Tools Mastered</div>
+                    </div>
+                    <div class="ai-stat">
+                        <div class="ai-stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="ai-stat-number">100%</div>
+                        <div class="ai-stat-label">Delivery Output</div>
+                    </div>
+                    <div class="ai-stat">
+                        <div class="ai-stat-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="ai-stat-number">10x</div>
+                        <div class="ai-stat-label">Velocity Gain</div>
+                    </div>
+                    <div class="ai-stat">
+                        <div class="ai-stat-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="ai-stat-number">Multi-Agent</div>
+                        <div class="ai-stat-label">Orchestration</div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- AI Card 1: Multi-Agent Systems -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-network-wired"></i></div>
+                            <h5 class="ai-card-title">Multi-Agent Orchestration</h5>
+                            <p class="ai-card-text">Built multi-agent orchestration pipelines with Claude Code where specialised agents handle component generation, QA, styling, and accessibility in parallel — achieving 100% delivery output at the velocity of a full team.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">Claude Code</span>
+                                <span class="ai-tag">Agent SDK</span>
+                                <span class="ai-tag">Parallel Agents</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8 order-1 order-md-2">
-                        <div class="content">
-                            <p>
-                                I am a Front End Web Developer based in Lahore, Pakistan with a Bachelor's degree in Computer Science from COMSATS University Islamabad, Lahore Campus. I specialize in building modern, responsive web applications using Angular, TypeScript, and modern CSS frameworks.
-                            </p>
-                            <p>
-                                With over 6 years of professional experience, I have worked on enterprise-level SaaS platforms, insurance broker website, automotive marketplaces, salon booking systems, and more. Currently working at TEKLOGIX, developing and maintaining the ALPHA KLAUS enterprise platform. I am passionate about creating clean, user-friendly interfaces and writing maintainable, scalable code.
-                            </p>
-                            <p>
-                                Pioneered AI-integrated workflows across the full product lifecycle — from UI generation (Figma Make, Stitch, Loveable) to AI-assisted coding (Claude Code, GLM) and automated delivery pipelines. Authored custom skill definition files encoding frontend domain knowledge for AI agents, enabling repeatable high-quality output. Built multi-agent orchestration systems where specialised agents handle component generation, QA, styling, and accessibility in parallel — achieving 100% delivery output at the velocity of a full team.
-                            </p>
-                            <h6 class="mt-4 mb-3">Technologies I work with:</h6>
-                            <ul>
-                                <li>Angular</li>
-                                <li>TypeScript</li>
-                                <li>JavaScript</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>Bootstrap</li>
-                                <li>Tailwind CSS</li>
-                                <li>PrimeNG</li>
-                                <li>PrimeFlex</li>
-                                <li>SASS/SCSS</li>
-                                <li>GSAP</li>
-                                <li>jQuery</li>
-                                <li>Agentic AI</li>
-                                <li>Multi-Agent Systems with Claude</li>
-                            </ul>
+
+                    <!-- AI Card 2: AI-Generated UI -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                            <h5 class="ai-card-title">AI-Powered UI Generation</h5>
+                            <p class="ai-card-text">Early adopter of AI-driven design-to-code tools including Figma Make, Stitch, and Loveable. Transforms design mockups into production-ready code with AI-assisted precision and speed.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">Claude Design</span>
+                                <span class="ai-tag">Figma Make</span>
+                                <span class="ai-tag">Stitch</span>
+                                <span class="ai-tag">Loveable</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Card 3: AI-Assisted Coding -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-code"></i></div>
+                            <h5 class="ai-card-title">AI-Enhanced Development</h5>
+                            <p class="ai-card-text">Expert in AI-assisted coding with Claude Code and GLM. Authored custom skill definition files encoding frontend domain knowledge for AI agents, enabling repeatable high-quality output across projects.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">Claude Code</span>
+                                <span class="ai-tag">GLM</span>
+                                <span class="ai-tag">Skill Definitions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Card 4: Automated Delivery -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-shipping-fast"></i></div>
+                            <h5 class="ai-card-title">Automated Delivery Pipelines</h5>
+                            <p class="ai-card-text">Integrated AI into CI/CD pipelines for automated testing, code review, and deployment. Reduced manual review cycles by embedding AI quality checks at every stage of the delivery pipeline.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">CI/CD</span>
+                                <span class="ai-tag">Auto QA</span>
+                                <span class="ai-tag">AI Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Card 5: Design-to-Code -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-palette"></i></div>
+                            <h5 class="ai-card-title">Design System Automation</h5>
+                            <p class="ai-card-text">Leveraged AI to bridge design and development — automating design token extraction, component generation from Figma, and maintaining consistency between design files and production codebases.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">Figma API</span>
+                                <span class="ai-tag">Design Tokens</span>
+                                <span class="ai-tag">Auto-Gen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Card 6: Full Lifecycle -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h5 class="ai-card-title">Full Lifecycle Integration</h5>
+                            <p class="ai-card-text">Pioneered AI-integrated workflows across the complete product lifecycle — from UI generation to AI-assisted coding and automated delivery. A single developer achieving the output of a cross-functional team.</p>
+                            <div class="ai-card-tags">
+                                <span class="ai-tag">End-to-End</span>
+                                <span class="ai-tag">Agentic AI</span>
+                                <span class="ai-tag">Full Stack</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,47 +307,120 @@
         <!-- Experience Section -->
         <section id="experience" class="py-5">
             <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
-                <h3 class="mb-4">Experience</h3>
-                <div class="experience-container p-4">
-                    <ul class="nav nav-tabs" id="experienceTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="teklogix-tab" data-bs-toggle="tab" data-bs-target="#teklogix" type="button" role="tab" aria-controls="teklogix" aria-selected="true">TEKLOGIX</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="technocares-tab" data-bs-toggle="tab" data-bs-target="#technocares" type="button" role="tab" aria-controls="technocares" aria-selected="false">TechnoCares</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content p-3" id="experienceTabContent">
-                        <div class="tab-pane fade show active" id="teklogix" role="tabpanel" aria-labelledby="teklogix-tab">
-                            <h5>Front End Web Developer</h5>
-                            <small class="text-secondary">2023 - Present</small>
-                            <p class="mt-3">
-                                Working as a Front End Web Developer at TEKLOGIX, Lahore. Developing and maintaining enterprise SaaS platform (ALPHA KLAUS) used for business operations.
+                <div class="experience-header text-center mb-5">
+                    <span class="experience-label">Career Journey</span>
+                    <h3 class="experience-title">Work Experience</h3>
+                    <p class="experience-subtitle">3+ years shaping digital experiences across enterprise and startup environments</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line">
+                        <div class="timeline-progress" id="timelineProgress"></div>
+                    </div>
+
+                    <!-- TEKLOGIX -->
+                    <div class="timeline-item timeline-item--active" data-experience="teklogix">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div class="timeline-company-info">
+                                    <div class="timeline-logo">
+                                        <span>TK</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="timeline-role">Senior Front End Developer</h5>
+                                        <h6 class="timeline-company">TEKLOGIX</h6>
+                                    </div>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-period"><i class="far fa-calendar-alt me-1"></i> 2023 - Present</span>
+                                    <span class="timeline-location"><i class="fas fa-map-marker-alt me-1"></i> Lahore</span>
+                                    <span class="timeline-badge timeline-badge--current">Current</span>
+                                </div>
+                            </div>
+                            <p class="timeline-description">
+                                Developing and maintaining ALPHA KLAUS — an enterprise SaaS platform for business operations management. Leading UI/UX direction with full design-to-development ownership.
                             </p>
-                            <ul>
-                                <li>Developed and maintained large-scale Angular 20 application with PrimeNG component library</li>
-                                <li>Implemented responsive UI designs using PrimeFlex and Tailwind CSS</li>
-                                <li>Collaborated with cross-functional teams to deliver features in an agile environment</li>
-                                <li>Wrote clean, maintainable TypeScript code with comprehensive component architecture</li>
-                            </ul>
-                            <div class="featuredLink mt-3">
-                                <a href="https://angular.dev/" target="_blank" class="btn btn-sm" data-bs-toggle="tooltip" title="Angular">
-                                    <i class="fa-brands fa-angular"></i> Angular
-                                </a>
+                            <div class="timeline-highlights">
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Developed large-scale Angular 20 application with PrimeNG component library</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Implemented responsive UI designs using PrimeFlex and Tailwind CSS</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Collaborated with cross-functional teams in agile environment</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Wrote clean, maintainable TypeScript code with comprehensive architecture</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tech-tags">
+                                <span class="timeline-tech-tag"><i class="fa-brands fa-angular"></i> Angular 20</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-code"></i> TypeScript</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-th-large"></i> PrimeNG</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-paint-brush"></i> SCSS</span>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="technocares" role="tabpanel" aria-labelledby="technocares-tab">
-                            <h5>Front End Web Developer</h5>
-                            <small class="text-secondary">2020 - 2023</small>
-                            <p class="mt-3">
-                                Worked as a Front End Web Developer at <a href="https://technocares.com/home" target="_blank">TechnoCares</a>, Lahore. Built multiple web applications including automotive marketplaces, claims management systems, and company websites.
+                    </div>
+
+                    <!-- TechnoCares -->
+                    <div class="timeline-item" data-experience="technocares">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div class="timeline-company-info">
+                                    <div class="timeline-logo timeline-logo--tc">
+                                        <span>TC</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="timeline-role">Front End Web Developer</h5>
+                                        <h6 class="timeline-company"><a href="https://technocares.com/home" target="_blank">TechnoCares</a></h6>
+                                    </div>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-period"><i class="far fa-calendar-alt me-1"></i> 2020 - 2023</span>
+                                    <span class="timeline-location"><i class="fas fa-map-marker-alt me-1"></i> Lahore</span>
+                                </div>
+                            </div>
+                            <p class="timeline-description">
+                                Built multiple web applications from the ground up — automotive marketplaces, claims management systems, car inspection platforms, and company websites. Delivered end-to-end frontend solutions across diverse industries.
                             </p>
-                            <ul>
-                                <li>Developed DOOZ automotive marketplace from scratch using Angular and Bootstrap</li>
-                                <li>Built JOCLAIMS claims management website with Angular and SASS</li>
-                                <li>Created AutoScore car inspection platform with responsive design</li>
-                                <li>Developed company website (technocares.com) using Angular and jQuery</li>
-                            </ul>
+                            <div class="timeline-highlights">
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Developed DOOZ automotive marketplace from scratch using Angular and Bootstrap</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Built JOCLAIMS claims management website with Angular and SASS</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Created AutoScore car inspection platform with responsive design</span>
+                                </div>
+                                <div class="timeline-highlight">
+                                    <div class="timeline-highlight-icon"><i class="fas fa-check-circle"></i></div>
+                                    <span>Developed company website (technocares.com) using Angular and jQuery</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tech-tags">
+                                <span class="timeline-tech-tag"><i class="fa-brands fa-angular"></i> Angular</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-code"></i> TypeScript</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-bold"></i> Bootstrap</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-paint-brush"></i> SASS</span>
+                                <span class="timeline-tech-tag"><i class="fas fa-js"></i> jQuery</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -245,24 +430,44 @@
         <!-- Education Section -->
         <section id="education" class="py-5">
             <div class="container px-3 px-sm-5 px-md-5 px-lg-5">
-                <h3 class="mb-4 text-center">Education</h3>
+                <div class="education-header text-center mb-5">
+                    <span class="education-label">Academic Background</span>
+                    <h3 class="education-title">Education</h3>
+                </div>
+
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="mb-1">Bachelor of Computer Science</h5>
-                                        <a href="https://lahore.comsats.edu.pk/" target="_blank">
-                                            <h6 class="mb-0">COMSATS University Islamabad, Lahore Campus</h6>
-                                        </a>
+                    <div class="col-lg-9">
+                        <div class="education-card">
+                            <div class="education-card-glow"></div>
+                            <div class="row align-items-center g-0">
+                                <!-- University Icon Side -->
+                                <div class="col-md-4 text-center">
+                                    <div class="education-icon-block">
+                                        <div class="education-icon-circle">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="education-year">2016 - 2020</div>
+                                        <div class="education-degree-type">Bachelor's Degree</div>
                                     </div>
-                                    <small class="text-secondary">2016 - 2020</small>
                                 </div>
-                                <div class="education-content mt-3">
-                                    <p>
-                                        Graduated with a Bachelor's degree in Computer Science. Developed strong foundations in software engineering, data structures, algorithms, and web technologies.
-                                    </p>
+
+                                <!-- Details Side -->
+                                <div class="col-md-8">
+                                    <div class="education-details">
+                                        <h5 class="education-degree">Bachelor of Computer Science</h5>
+                                        <a href="https://lahore.comsats.edu.pk/" target="_blank" class="education-university">
+                                            <i class="fas fa-university me-2"></i>COMSATS University Islamabad, Lahore Campus
+                                        </a>
+                                        <p class="education-description">
+                                            Graduated with a Bachelor's degree in Computer Science. Developed strong foundations in software engineering, data structures, algorithms, and web technologies.
+                                        </p>
+                                        <div class="education-focus-areas">
+                                            <span class="education-focus"><i class="fas fa-microchip"></i> Software Engineering</span>
+                                            <span class="education-focus"><i class="fas fa-sitemap"></i> Data Structures</span>
+                                            <span class="education-focus"><i class="fas fa-brain"></i> Algorithms</span>
+                                            <span class="education-focus"><i class="fas fa-globe"></i> Web Technologies</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -280,9 +485,16 @@
 
                     <!-- Project 1: ALPHA KLAUS -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="alpha-klaus">
                             <div class="card-head">
-                                <img src="images/projects/alpha-klaus.png" class="card-img-top" alt="ALPHA KLAUS">
+                                <div class="project-slider" data-images='["images/projects/alpha/alpha-1.jpeg","images/projects/alpha/alpha-2.jpeg","images/projects/alpha/alpha-3.jpeg","images/projects/alpha/alpha-4.jpeg"]' data-auto="3500">
+                                    <div class="slider-track">
+                                        <img src="images/projects/alpha/alpha-1.jpeg" class="card-img-top" alt="ALPHA KLAUS">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">ALPHA KLAUS</h5>
@@ -307,9 +519,16 @@
 
                     <!-- Project 2: Pfoten Versichert -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="pfoten-versichert">
                             <div class="card-head">
-                                <img src="images/projects/pfoten-versichert.png" class="card-img-top" alt="Pfoten Versichert">
+                                <div class="project-slider" data-images='["images/projects/pfoten/pfoten-1.jpeg","images/projects/pfoten/pfoten-2.jpeg","images/projects/pfoten/pfoten-3.jpeg","images/projects/pfoten/pfoten-4.jpeg","images/projects/pfoten/pfoten-5.png","images/projects/pfoten/pfoten-6.jpeg","images/projects/pfoten/pfoten-7.png"]' data-auto="3500">
+                                    <div class="slider-track">
+                                        <img src="images/projects/pfoten/pfoten-1.jpeg" class="card-img-top" alt="Pfoten Versichert">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Pfoten Versichert</h5>
@@ -334,9 +553,16 @@
 
                     <!-- Project 3: kinderleicht Versichert -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="kinderleicht-versichert">
                             <div class="card-head">
-                                <img src="images/projects/kinderleicht-versichert.png" class="card-img-top" alt="kinderleicht Versichert">
+                                <div class="project-slider" data-images='["images/projects/kinderleicht/kinderleicht-1.jpeg","images/projects/kinderleicht/kinderleicht-2.jpeg","images/projects/kinderleicht/kinderleicht-3.jpeg","images/projects/kinderleicht/kinderleicht-4.jpeg","images/projects/kinderleicht/kinderleicht-5.jpeg","images/projects/kinderleicht/kinderleicht-6.jpeg","images/projects/kinderleicht/kinderleicht-7.jpeg"]' data-auto="3500">
+                                    <div class="slider-track">
+                                        <img src="images/projects/kinderleicht/kinderleicht-1.jpeg" class="card-img-top" alt="kinderleicht Versichert">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">kinderleicht Versichert</h5>
@@ -361,9 +587,16 @@
 
                     <!-- Project 4: DOOZ -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="dooz">
                             <div class="card-head">
-                                <img src="images/projects/dooz.png" class="card-img-top" alt="DOOZ">
+                                <div class="project-slider" data-images='["images/projects/dooz/dooz-1.jpeg","images/projects/dooz/dooz-2.jpeg","images/projects/dooz/dooz-3.jpeg","images/projects/dooz/dooz-4.jpeg","images/projects/dooz/dooz-5.jpeg","images/projects/dooz/dooz-6.jpeg"]' data-auto="3000">
+                                    <div class="slider-track">
+                                        <img src="images/projects/dooz/dooz-1.jpeg" class="card-img-top" alt="DOOZ">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">DOOZ</h5>
@@ -387,9 +620,13 @@
 
                     <!-- Project 5: JOCLAIMS -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="joclaims">
                             <div class="card-head">
-                                <img src="images/projects/joclaims.png" class="card-img-top" alt="JOCLAIMS">
+                                <div class="project-slider" data-images='["images/projects/joclaims/joclaims-1.jpeg"]'>
+                                    <div class="slider-track">
+                                        <img src="images/projects/joclaims/joclaims-1.jpeg" class="card-img-top" alt="JOCLAIMS">
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">JOCLAIMS</h5>
@@ -413,9 +650,16 @@
 
                     <!-- Project 6: AutoScore -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="autoscore">
                             <div class="card-head">
-                                <img src="images/projects/autoscore.png" class="card-img-top" alt="AutoScore">
+                                <div class="project-slider" data-images='["images/projects/autoscore/autoscore-1.jpeg","images/projects/autoscore/autoscore-2.jpeg","images/projects/autoscore/autoscore-3.jpeg","images/projects/autoscore/autoscore-4.jpeg"]' data-auto="3500">
+                                    <div class="slider-track">
+                                        <img src="images/projects/autoscore/autoscore-1.jpeg" class="card-img-top" alt="AutoScore">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">AutoScore</h5>
@@ -439,7 +683,7 @@
 
                     <!-- Project 7: E-Workshop -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="e-workshop">
                             <div class="card-head">
                                 <img src="images/projects/e-workshop.png" class="card-img-top" alt="E-Workshop">
                             </div>
@@ -455,20 +699,22 @@
                                 </div>
                             </div>
                             <div class="card-footer bg-transparent">
-<!--                                <div class="float-end">-->
-<!--                                    <a href="#" class="btn btn-sm">-->
-<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
-<!--                                    </a>-->
-<!--                                </div>-->
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 8: 360 Business Pages -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="360-business">
                             <div class="card-head">
-                                <img src="images/projects/360business.png" class="card-img-top" alt="360 Business Pages">
+                                <div class="project-slider" data-images='["images/projects/360/360-1.jpeg","images/projects/360/360-2.jpeg","images/projects/360/360-3.jpeg","images/projects/360/360-4.jpeg","images/projects/360/360-5.jpeg"]' data-auto="3500">
+                                    <div class="slider-track">
+                                        <img src="images/projects/360/360-1.jpeg" class="card-img-top" alt="360 Business Pages">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">360 Business Pages</h5>
@@ -482,18 +728,13 @@
                                 </div>
                             </div>
                             <div class="card-footer bg-transparent">
-<!--                                <div class="float-end">-->
-<!--                                    <a href="#" class="btn btn-sm">-->
-<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
-<!--                                    </a>-->
-<!--                                </div>-->
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 9: TechnoCares -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="technocares">
                             <div class="card-head">
                                 <img src="images/projects/technocares.png" class="card-img-top" alt="TechnoCares">
                             </div>
@@ -519,9 +760,16 @@
 
                     <!-- Project 10: Sacred Path -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="sacred-path">
                             <div class="card-head">
-                                <img src="images/projects/sacred-path.png" class="card-img-top" alt="Sacred Path">
+                                <div class="project-slider" data-images='["images/projects/sacred-path/sacred-1.jpeg","images/projects/sacred-path/sacred-2.jpeg","images/projects/sacred-path/sacred-3.jpeg","images/projects/sacred-path/sacred-4.jpeg","images/projects/sacred-path/sacred-5.jpeg","images/projects/sacred-path/sacred-6.jpeg","images/projects/sacred-path/sacred-7.jpeg","images/projects/sacred-path/sacred-8.jpeg","images/projects/sacred-path/sacred-9.jpeg","images/projects/sacred-path/sacred-10.jpeg"]' data-auto="3000">
+                                    <div class="slider-track">
+                                        <img src="images/projects/sacred-path/sacred-1.jpeg" class="card-img-top" alt="Sacred Path">
+                                    </div>
+                                    <button class="slider-nav slider-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="slider-nav slider-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                                    <div class="slider-dots"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Sacred Path</h5>
@@ -534,18 +782,13 @@
                                 </div>
                             </div>
                             <div class="card-footer bg-transparent">
-<!--                                <div class="float-end">-->
-<!--                                    <a href="#" class="btn btn-sm">-->
-<!--                                        <i class="fas fa-external-link-alt"></i> View Project-->
-<!--                                    </a>-->
-<!--                                </div>-->
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 11: Hairology Salons -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
+                        <div class="card h-100" data-project="hairology">
                             <div class="card-head">
                                 <img src="images/projects/hairology.png" class="card-img-top" alt="Hairology Salons">
                             </div>
@@ -568,8 +811,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
                 </div>
             </div>
@@ -610,10 +851,16 @@
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-header border-0 pb-0">
                     <h5 class="modal-title text-white" id="imageLightboxLabel"></h5>
+                    <span class="lightbox-counter text-white opacity-75 ms-2" id="lightboxCounter"></span>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center p-0">
-                    <img src="" alt="" class="img-fluid rounded" id="lightboxImage" style="max-height: 85vh; cursor: zoom-out;">
+                    <div class="lightbox-carousel" id="lightboxCarousel">
+                        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                        <img src="" alt="" class="img-fluid rounded" id="lightboxImage" style="max-height: 85vh;">
+                        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="lightbox-dots" id="lightboxDots"></div>
                 </div>
             </div>
         </div>

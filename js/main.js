@@ -1,6 +1,6 @@
 /**
  * Portfolio Main JavaScript
- * Theme toggle, scroll effects, and navigation
+ * Theme toggle, scroll effects, navigation, image sliders, and lightbox carousel
  */
 
 (function() {
@@ -122,43 +122,234 @@
     }
 
     // ============================================
-    // Image Lightbox for Project Cards
+    // Project Card Image Sliders
+    // ============================================
+    function initProjectSliders() {
+        const sliders = document.querySelectorAll('.project-slider');
+
+        sliders.forEach(function(slider) {
+            const images = JSON.parse(slider.getAttribute('data-images') || '[]');
+            if (images.length <= 1) return;
+
+            const track = slider.querySelector('.slider-track');
+            const img = track.querySelector('img');
+            const dotsContainer = slider.querySelector('.slider-dots');
+            const prevBtn = slider.querySelector('.slider-prev');
+            const nextBtn = slider.querySelector('.slider-next');
+            let currentIndex = 0;
+            let autoInterval = null;
+            const autoDelay = parseInt(slider.getAttribute('data-auto')) || 3500;
+
+            // Create dots
+            images.forEach(function(_, i) {
+                const dot = document.createElement('button');
+                dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+                dot.addEventListener('click', function() {
+                    goToSlide(i);
+                    resetAuto();
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            function goToSlide(index) {
+                if (index === currentIndex) return;
+                currentIndex = index;
+
+                img.classList.add('fading');
+                setTimeout(function() {
+                    img.src = images[currentIndex];
+                    img.alt = img.alt || 'Project screenshot ' + (currentIndex + 1);
+                    img.classList.remove('fading');
+                }, 200);
+
+                updateDots();
+            }
+
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.slider-dot');
+                dots.forEach(function(dot, i) {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            function nextSlide() {
+                goToSlide((currentIndex + 1) % images.length);
+            }
+
+            function prevSlide() {
+                goToSlide((currentIndex - 1 + images.length) % images.length);
+            }
+
+            function resetAuto() {
+                clearInterval(autoInterval);
+                autoInterval = setInterval(nextSlide, autoDelay);
+            }
+
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                resetAuto();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                resetAuto();
+            });
+
+            // Pause on hover
+            slider.addEventListener('mouseenter', function() {
+                clearInterval(autoInterval);
+            });
+
+            slider.addEventListener('mouseleave', function() {
+                autoInterval = setInterval(nextSlide, autoDelay);
+            });
+
+            // Start auto-rotation
+            autoInterval = setInterval(nextSlide, autoDelay);
+        });
+    }
+
+    // ============================================
+    // Experience Timeline Scroll Animation
+    // ============================================
+    function initTimelineAnimation() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const progressBar = document.getElementById('timelineProgress');
+
+        if (!timelineItems.length || !progressBar) return;
+
+        function checkTimeline() {
+            const timelineTop = document.querySelector('.experience-timeline').getBoundingClientRect().top;
+            const timelineHeight = document.querySelector('.experience-timeline').offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrolled = Math.max(0, windowHeight - timelineTop);
+            const progress = Math.min(1, scrolled / timelineHeight);
+            progressBar.style.height = (progress * 100) + '%';
+        }
+
+        window.addEventListener('scroll', checkTimeline, { passive: true });
+        checkTimeline();
+    }
+
+    // ============================================
+    // Image Lightbox with Carousel
     // ============================================
     function initImageLightbox() {
-        const projectImages = document.querySelectorAll('#projects .card-head img');
         const lightboxModal = document.getElementById('imageLightbox');
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxTitle = document.getElementById('imageLightboxLabel');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxDots = document.getElementById('lightboxDots');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
 
-        if (!lightboxModal || !projectImages.length) return;
+        if (!lightboxModal) return;
 
         const modal = new bootstrap.Modal(lightboxModal);
+        let currentImages = [];
+        let currentIndex = 0;
 
-        projectImages.forEach(function(img) {
-            // Add cursor pointer to indicate clickable
+        // Handle clicks on slider images
+        document.querySelectorAll('#projects .project-slider .slider-track img').forEach(function(img) {
             img.style.cursor = 'zoom-in';
-
             img.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                // Get the project title from the card
                 const card = this.closest('.card');
+                const slider = this.closest('.project-slider');
                 const title = card ? card.querySelector('.card-title')?.textContent : '';
 
-                // Set modal content
-                lightboxImage.src = this.src;
-                lightboxImage.alt = this.alt;
-                lightboxTitle.textContent = title;
+                currentImages = JSON.parse(slider.getAttribute('data-images') || '[]');
 
-                // Show modal
-                modal.show();
+                // Find current slider index by matching src
+                const dots = slider.querySelectorAll('.slider-dot');
+                let activeIdx = 0;
+                dots.forEach(function(dot, i) {
+                    if (dot.classList.contains('active')) activeIdx = i;
+                });
+                currentIndex = activeIdx;
+
+                openLightbox(title);
             });
         });
 
-        // Close modal when clicking on the image
-        lightboxImage.addEventListener('click', function() {
-            modal.hide();
+        // Handle clicks on single-image cards (no slider)
+        document.querySelectorAll('#projects .card-head > img').forEach(function(img) {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const card = this.closest('.card');
+                const title = card ? card.querySelector('.card-title')?.textContent : '';
+
+                currentImages = [this.src];
+                currentIndex = 0;
+
+                openLightbox(title);
+            });
+        });
+
+        function openLightbox(title) {
+            lightboxTitle.textContent = title;
+            updateLightbox();
+            modal.show();
+        }
+
+        function updateLightbox() {
+            lightboxImage.src = currentImages[currentIndex];
+
+            // Counter
+            if (currentImages.length > 1) {
+                lightboxCounter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+                lightboxCounter.style.display = '';
+            } else {
+                lightboxCounter.style.display = 'none';
+            }
+
+            // Show/hide nav buttons
+            lightboxPrev.style.display = currentImages.length > 1 ? '' : 'none';
+            lightboxNext.style.display = currentImages.length > 1 ? '' : 'none';
+
+            // Build dots
+            lightboxDots.innerHTML = '';
+            if (currentImages.length > 1) {
+                currentImages.forEach(function(_, i) {
+                    const dot = document.createElement('button');
+                    dot.className = 'lightbox-dot' + (i === currentIndex ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+                    dot.addEventListener('click', function() {
+                        currentIndex = i;
+                        updateLightbox();
+                    });
+                    lightboxDots.appendChild(dot);
+                });
+            }
+        }
+
+        lightboxPrev.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            updateLightbox();
+        });
+
+        lightboxNext.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            updateLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightboxModal.classList.contains('show')) return;
+
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+                updateLightbox();
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % currentImages.length;
+                updateLightbox();
+            }
         });
     }
 
@@ -171,6 +362,8 @@
         initStickyHeader();
         initSmoothScroll();
         initTooltips();
+        initProjectSliders();
+        initTimelineAnimation();
         initImageLightbox();
     });
 
