@@ -172,8 +172,8 @@
             el.style.height = s.size + 'px';
             el.style.left = s.x;
             el.style.top = s.y;
-            el.style.animationDuration = s.duration + 's';
-            el.style.animationDelay = s.delay + 's';
+            el.style.animationDuration = s.duration + 's, 1.5s';
+            el.style.animationDelay = s.delay + 's, 0s';
             container.appendChild(el);
         });
     }
